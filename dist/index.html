@@ -8,18 +8,18 @@
   <body>
     <h1>Leaderboard</h1>
     <span id="main-container">
-      <main>
-        <span>
+      <main class="flex-column">
+        <span id="scores-title">
           <h2>Recent scores</h2>
-          <button>Refresh</button>
+          <button id="refresh">Refresh</button>
         </span>
         <span id="scores-container"></span>
       </main>
-      <form action="">
+      <form action="" class="flex-column">
         <h2>Add your score</h2>
         <input type="text" />
-        <input type="text" />
-        <button type="submit">Submit</button>
+        <input type="number" />
+        <button type="submit" id="submit">Submit</button>
       </form>
     </span>
   </body>
