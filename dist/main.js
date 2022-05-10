@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_storage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/storage */ \"./src/modules/storage.js\");\n\r\n\r\n\r\n_modules_storage__WEBPACK_IMPORTED_MODULE_1__[\"default\"].add('David', 100);\r\n_modules_storage__WEBPACK_IMPORTED_MODULE_1__[\"default\"].add('Luis', 300);\r\n\r\nconsole.log(_modules_storage__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\r\n\n\n//# sourceURL=webpack://webpacktemplate/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_storage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/storage */ \"./src/modules/storage.js\");\n\r\n\r\n\r\n_modules_storage__WEBPACK_IMPORTED_MODULE_1__[\"default\"].add('David', 100);\r\n_modules_storage__WEBPACK_IMPORTED_MODULE_1__[\"default\"].add('Luis', 300);\r\n\r\nconsole.log(_modules_storage__WEBPACK_IMPORTED_MODULE_1__[\"default\"].scores[0]);\r\n\n\n//# sourceURL=webpack://webpacktemplate/./src/index.js?");
 
 /***/ }),
 
@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nclass Scores {\r\n  constructor() {\r\n    this.scores = [];\r\n  }\r\n  add(newName, newScore) {\r\n    class Player {\r\n      constructor(name, score) {\r\n        this.name = name;\r\n        this.score = score;\r\n      }\r\n    }\r\n    const newPlayer = new Player(newName, newScore);\r\n    this.scores.push(newPlayer);\r\n  }\r\n}\r\n\r\nconst scores = new Scores();\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scores);\r\n\n\n//# sourceURL=webpack://webpacktemplate/./src/modules/storage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nclass Scores {\r\n  constructor() {\r\n    this.scores = [];\r\n  }\r\n  add(name, score) {\r\n    const newPlayer = {};\r\n    newPlayer.name = name;\r\n    newPlayer.score = score;\r\n    this.scores.push(newPlayer);\r\n  }\r\n}\r\n\r\nconst storage = new Scores();\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (storage);\r\n\n\n//# sourceURL=webpack://webpacktemplate/./src/modules/storage.js?");
 
 /***/ })
 

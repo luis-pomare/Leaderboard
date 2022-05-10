@@ -2,18 +2,14 @@ class Scores {
   constructor() {
     this.scores = [];
   }
-  add(newName, newScore) {
-    class Player {
-      constructor(name, score) {
-        this.name = name;
-        this.score = score;
-      }
-    }
-    const newPlayer = new Player(newName, newScore);
+  add(name, score) {
+    const newPlayer = {};
+    newPlayer.name = name;
+    newPlayer.score = score;
     this.scores.push(newPlayer);
   }
 }
 
-const scores = new Scores();
+const storage = new Scores();
 
-export default scores;
+export default storage;

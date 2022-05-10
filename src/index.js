@@ -1,7 +1,7 @@
 import './style.css';
-import scores from './modules/storage';
+import storage from './modules/storage';
 
-scores.add('David', 100);
-scores.add('Luis', 300);
+storage.add('David', 100);
+storage.add('Luis', 300);
 
-console.log(scores);
+console.log(storage.scores[0]);
