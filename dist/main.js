@@ -116,7 +116,17 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_storage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/storage */ \"./src/modules/storage.js\");\n\r\n\r\n\r\n_modules_storage__WEBPACK_IMPORTED_MODULE_1__[\"default\"].add('David', 100);\r\n_modules_storage__WEBPACK_IMPORTED_MODULE_1__[\"default\"].add('Luis', 300);\r\n\r\nconsole.log(_modules_storage__WEBPACK_IMPORTED_MODULE_1__[\"default\"].scores[0]);\r\n\n\n//# sourceURL=webpack://webpacktemplate/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_storage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/storage */ \"./src/modules/storage.js\");\n/* harmony import */ var _modules_listeners__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/listeners */ \"./src/modules/listeners.js\");\n\r\n\r\n\r\n\r\n(0,_modules_listeners__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n\n\n//# sourceURL=webpack://webpacktemplate/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/listeners.js":
+/*!**********************************!*\
+  !*** ./src/modules/listeners.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ addListeners)\n/* harmony export */ });\n/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./storage */ \"./src/modules/storage.js\");\n\r\nconst refresh = document.getElementById('refresh');\r\nconst submit = document.getElementById('submit');\r\nconst name = document.getElementById('name');\r\nconst score = document.getElementById('score');\r\n\r\nfunction addListeners() {\r\n  refresh.addEventListener('click', () => {\r\n    console.log('refresh');\r\n    //updateDom.update();\r\n  });\r\n\r\n  submit.addEventListener('click', () => {\r\n    console.log('submit');\r\n    //storage.add(name, score);\r\n  });\r\n}\r\n\n\n//# sourceURL=webpack://webpacktemplate/./src/modules/listeners.js?");
 
 /***/ }),
 
