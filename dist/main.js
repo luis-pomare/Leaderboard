@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_storage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/storage */ \"./src/modules/storage.js\");\n/* harmony import */ var _modules_listeners__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/listeners */ \"./src/modules/listeners.js\");\n\r\n\r\n\r\n\r\n(0,_modules_listeners__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n\n\n//# sourceURL=webpack://webpacktemplate/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_listeners__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/listeners */ \"./src/modules/listeners.js\");\n\n\n\n(0,_modules_listeners__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n\n//# sourceURL=webpack://webpacktemplate/./src/index.js?");
 
 /***/ }),
 
@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ addListeners)\n/* harmony export */ });\n/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./storage */ \"./src/modules/storage.js\");\n\r\nconst refresh = document.getElementById('refresh');\r\nconst submit = document.getElementById('submit');\r\nconst name = document.getElementById('name');\r\nconst score = document.getElementById('score');\r\n\r\nfunction addListeners() {\r\n  refresh.addEventListener('click', () => {\r\n    console.log('refresh');\r\n    //updateDom.update();\r\n  });\r\n\r\n  submit.addEventListener('click', () => {\r\n    console.log('submit');\r\n    //storage.add(name, score);\r\n  });\r\n}\r\n\n\n//# sourceURL=webpack://webpacktemplate/./src/modules/listeners.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ addListeners)\n/* harmony export */ });\n/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./storage */ \"./src/modules/storage.js\");\n/* harmony import */ var _updateDom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./updateDom */ \"./src/modules/updateDom.js\");\n\n\n\nconst refresh = document.getElementById('refresh');\nconst submit = document.getElementById('submit');\nconst name = document.getElementById('name');\nconst score = document.getElementById('score');\n\nfunction addListeners() {\n  refresh.addEventListener('click', () => {\n    (0,_updateDom__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  });\n\n  submit.addEventListener('click', () => {\n    _storage__WEBPACK_IMPORTED_MODULE_0__[\"default\"].add(name.value, score.value);\n    name.value = '';\n    score.value = '';\n  });\n}\n\n\n//# sourceURL=webpack://webpacktemplate/./src/modules/listeners.js?");
 
 /***/ }),
 
@@ -136,7 +136,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nclass Scores {\r\n  constructor() {\r\n    this.scores = [];\r\n  }\r\n  add(name, score) {\r\n    const newPlayer = {};\r\n    newPlayer.name = name;\r\n    newPlayer.score = score;\r\n    this.scores.push(newPlayer);\r\n  }\r\n}\r\n\r\nconst storage = new Scores();\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (storage);\r\n\n\n//# sourceURL=webpack://webpacktemplate/./src/modules/storage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nclass Scores {\n  constructor() {\n    this.scores = [];\n  }\n\n  add(name, score) {\n    const newPlayer = {};\n    newPlayer.name = name;\n    newPlayer.score = score;\n    this.scores.push(newPlayer);\n  }\n}\n\nconst storage = new Scores();\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (storage);\n\n\n//# sourceURL=webpack://webpacktemplate/./src/modules/storage.js?");
+
+/***/ }),
+
+/***/ "./src/modules/updateDom.js":
+/*!**********************************!*\
+  !*** ./src/modules/updateDom.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ update)\n/* harmony export */ });\n/* harmony import */ var _storage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./storage */ \"./src/modules/storage.js\");\n\n\nconst scoresContainer = document.getElementById('scores-container');\n\nfunction update() {\n  scoresContainer.innerHTML = '';\n  for (let i = 0; i < _storage__WEBPACK_IMPORTED_MODULE_0__[\"default\"].scores.length; i += 1) {\n    scoresContainer.innerHTML += `\n    <div>\n      ${_storage__WEBPACK_IMPORTED_MODULE_0__[\"default\"].scores[i].name}: ${_storage__WEBPACK_IMPORTED_MODULE_0__[\"default\"].scores[i].score}\n    </div>\n    `;\n  }\n}\n\n\n//# sourceURL=webpack://webpacktemplate/./src/modules/updateDom.js?");
 
 /***/ })
 

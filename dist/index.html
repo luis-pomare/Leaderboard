@@ -7,20 +7,20 @@
   <script defer src="main.js"></script></head>
   <body>
     <h1>Leaderboard</h1>
-    <span id="main-container">
+    <div id="main-container">
       <main class="flex-column">
-        <span id="scores-title">
+        <div id="scores-title">
           <h2>Recent scores</h2>
-          <button id="refresh">Refresh</button>
-        </span>
+          <button id="refresh" type="button">Refresh</button>
+        </div>
         <span id="scores-container"></span>
       </main>
-      <form action="" class="flex-column">
+      <form action="none" class="flex-column">
         <h2>Add your score</h2>
         <input type="text" id="name" />
         <input type="number" id="score" />
-        <button type="submit" id="submit">Submit</button>
+        <button type="button" id="submit">Submit</button>
       </form>
-    </span>
+    </div>
   </body>
 </html>
