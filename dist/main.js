@@ -136,7 +136,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nclass Scores {\n  constructor() {\n    this.scores = [];\n  }\n\n  add(name, score) {\n    const newPlayer = {};\n    newPlayer.name = name;\n    newPlayer.score = score;\n    this.scores.push(newPlayer);\n  }\n}\n\nconst storage = new Scores();\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (storage);\n\n\n//# sourceURL=webpack://webpacktemplate/./src/modules/storage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nclass Scores {\n  constructor() {\n    this.scores = [];\n  }\n\n  add(name, score) {\n    fetch(\n      'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/tnnUMX0ZqphxGBxRdpZI/scores/',\n      {\n        method: 'POST',\n        body: JSON.stringify({\n          user: name,\n          score: score,\n        }),\n        headers: {\n          'Content-type': 'application/json; charset=UTF-8',\n        },\n      }\n    )\n      .then((response) => response.json())\n      .then((json) => console.log(json));\n  }\n}\n\nconst storage = new Scores();\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (storage);\n\n\n//# sourceURL=webpack://webpacktemplate/./src/modules/storage.js?");
 
 /***/ }),
 
