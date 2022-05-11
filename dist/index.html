@@ -1,1 +1,26 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Wbpack Exercise</title><script defer="defer" src="main.js"></script></head><body><h1>Hello webpack!</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <h1>Leaderboard</h1>
+    <div id="main-container">
+      <main class="flex-column">
+        <div id="scores-title">
+          <h2>Recent scores</h2>
+          <button id="refresh" type="button">Refresh</button>
+        </div>
+        <span id="scores-container"></span>
+      </main>
+      <form action="none" class="flex-column">
+        <h2>Add your score</h2>
+        <input type="text" id="name" />
+        <input type="number" id="score" />
+        <button type="button" id="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
