@@ -1,5 +1,4 @@
-import storage from './storage';
-import update from './updateDom';
+import storage from './storage.js';
 
 const refresh = document.getElementById('refresh');
 const submit = document.getElementById('submit');
@@ -8,7 +7,7 @@ const score = document.getElementById('score');
 
 export default function addListeners() {
   refresh.addEventListener('click', () => {
-    update();
+    storage.get();
   });
 
   submit.addEventListener('click', () => {
