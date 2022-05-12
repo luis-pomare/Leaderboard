@@ -7,6 +7,7 @@ main {
   width: 40vw;
   margin-left: auto;
   margin-right: 5%;
+  border: 3px solid #f1eee9;
 }
 
 form {
@@ -47,13 +48,9 @@ body {
 
 h1 {
   color: #000;
-  text-shadow: 3px 3px 3px #ffffff;
+  text-shadow: 3px 3px 3px #fff;
   font-size: 60px;
   margin-left: 25px;
-}
-
-main {
-  border: 3px solid #f1eee9;
 }
 
 main div {
@@ -79,6 +76,7 @@ main div {
     grid-template-columns: 90%;
     margin-left: 50px;
   }
+
   main {
     width: 100%;
     margin-left: 0;
@@ -86,6 +84,7 @@ main div {
     margin-top: 35px;
     order: 2;
   }
+
   h1 {
     font-size: 45px;
   }
