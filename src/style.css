@@ -47,7 +47,7 @@ body {
 
 h1 {
   color: #000;
-  text-shadow: 1px 3px #ffffff;
+  text-shadow: 3px 3px 3px #ffffff;
   font-size: 60px;
   margin-left: 25px;
 }
@@ -58,11 +58,17 @@ main {
 
 main div {
   border: 2px solid #f1eee9;
+  font-size: 18px;
   text-align: center;
   padding: 10px;
-  text-shadow: 1px 3px #000;
+  font-weight: 600;
 }
 
 .white {
   background-color: #f1eee9;
+  color: #000;
+}
+
+.black {
+  text-shadow: 1px 2px #000;
 }
