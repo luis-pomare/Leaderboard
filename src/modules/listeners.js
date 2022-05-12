@@ -5,7 +5,7 @@ const submit = document.getElementById('submit');
 const name = document.getElementById('name');
 const score = document.getElementById('score');
 
-export default function addListeners() {
+export default () => {
   refresh.addEventListener('click', () => {
     storage.get();
   });
@@ -15,4 +15,4 @@ export default function addListeners() {
     name.value = '';
     score.value = '';
   });
-}
+};

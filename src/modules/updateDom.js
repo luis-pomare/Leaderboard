@@ -1,6 +1,6 @@
 const scoresContainer = document.getElementById('scores-container');
 
-export default function update(scores) {
+export default (scores) => {
   scores.result = scores.result.sort((a, b) => b.score - a.score);
   scoresContainer.innerHTML = '';
   for (let i = 0; i < scores.result.length; i += 1) {
@@ -10,4 +10,4 @@ export default function update(scores) {
     </div>
     `;
   }
-}
+};
