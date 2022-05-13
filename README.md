@@ -11,7 +11,13 @@
 
 ## App screenshot
 
+### Desktop
+
 [<img src="app_screenshot.png">]()
+
+### Mobile
+
+[<img src="app_screenshot_mobile.png">]()
 
 ## Getting Started
 

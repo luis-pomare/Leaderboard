@@ -7,6 +7,7 @@ main {
   width: 40vw;
   margin-left: auto;
   margin-right: 5%;
+  border: 3px solid #f1eee9;
 }
 
 form {
@@ -47,22 +48,44 @@ body {
 
 h1 {
   color: #000;
-  text-shadow: 1px 3px #ffffff;
+  text-shadow: 3px 3px 3px #fff;
   font-size: 60px;
   margin-left: 25px;
 }
 
-main {
-  border: 3px solid #f1eee9;
-}
-
 main div {
   border: 2px solid #f1eee9;
+  font-size: 18px;
   text-align: center;
   padding: 10px;
-  text-shadow: 1px 3px #000;
+  font-weight: 600;
 }
 
 .white {
   background-color: #f1eee9;
+  color: #000;
+}
+
+.black {
+  text-shadow: 1px 2px #000;
+}
+
+@media (max-width: 670px) {
+  #main-container {
+    display: grid;
+    grid-template-columns: 90%;
+    margin-left: 50px;
+  }
+
+  main {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 35px;
+    order: 2;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
 }
